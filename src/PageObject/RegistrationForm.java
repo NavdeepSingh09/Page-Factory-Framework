@@ -14,7 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class RegistrationForm {
 	
-	 final WebDriver driver;
+	 	final WebDriver driver;
 		@FindBy(how=How.XPATH,using="//android.widget.EditText[@text='First Name']")
 		public WebElement F_name_TextBox;
 		
@@ -69,10 +69,10 @@ public class RegistrationForm {
 		@FindBy(how=How.XPATH,using="//android.widget.TextView[@text='10 digit phone number required']")
 		public WebElement Phone_Alert;
 		
-		File filename= new File(" Your Excel path here");
+		File filename= new File("C:\\Users\\username\\eclipse-workspace\\Factory Method\\InputData.xlsx");
 		
 		
-		public RegistrationForm(WebDriver driver)
+		protected RegistrationForm(WebDriver driver)
 		{
 			this.driver=driver;
 			PageFactory.initElements(driver, this);
@@ -134,4 +134,5 @@ public class RegistrationForm {
 			F_name_TextBox.sendKeys(FName);
 			
 		}
+		
 }

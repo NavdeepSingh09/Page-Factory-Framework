@@ -12,6 +12,8 @@ import org.testng.annotations.Test;
 
 import PageObject.GetStartHomePage;
 import PageObject.RegistrationForm;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -22,7 +24,7 @@ public class TestCaseMain {
 	RegistrationForm objRegForm;
 	String userName = " ";//Your UserName of BrowserStack
 	String accessKey = " ";//Your access Key of BrowserStack
-	String AppURL= " ";//App URL 
+	String AppURL= " ";// Your App URL
 	
 	@BeforeSuite
 	public void setupMyAppium() throws Exception

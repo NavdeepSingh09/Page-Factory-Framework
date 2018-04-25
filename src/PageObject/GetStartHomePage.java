@@ -5,12 +5,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.iOSFindBy;
+
 public class GetStartHomePage {
 	final WebDriver driver;
-	@FindBy(how=How.ID,using="com.compass_canada.thrive:id/login_getStarted")
-	 public WebElement ClickOnGetStarted;
+	@FindBy(how=How.XPATH,using="//android.widget.Button[@text='Get started']")
+
 	
-	public GetStartHomePage(WebDriver driver)
+  public WebElement ClickOnGetStarted;
+	
+	protected GetStartHomePage(WebDriver driver)
 	{
 		this.driver=driver;
 	}
